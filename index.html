@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>社内AI勉強会 告示ページ</title>
+    <style>
+      :root {
+        --bg: #f3f7ff;
+        --card: #ffffff;
+        --text: #1f2937;
+        --sub: #6b7280;
+        --accent: #4f46e5;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+        background: radial-gradient(circle at 15% 20%, #eef2ff 0%, var(--bg) 42%, #eef6ff 100%);
+        color: var(--text);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+
+      .poster {
+        width: min(860px, 100%);
+        background: var(--card);
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 24px 60px rgba(79, 70, 229, 0.12), 0 8px 24px rgba(15, 23, 42, 0.08);
+        border: 1px solid #eef2ff;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 360px;
+        background-image:
+          linear-gradient(130deg, rgba(79, 70, 229, 0.56), rgba(56, 189, 248, 0.4)),
+          url("https://images.unsplash.com/photo-1677442135136-760c813028c9?auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        padding: 28px;
+      }
+
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.92);
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      .content {
+        padding: 30px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .item {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        gap: 12px;
+        align-items: baseline;
+        padding: 12px 16px;
+        border-radius: 14px;
+        background: #f8faff;
+        border: 1px solid #e7edff;
+      }
+
+      .label {
+        color: var(--sub);
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        font-size: 0.86rem;
+      }
+
+      .value {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+
+      .title-value {
+        font-size: 1.3rem;
+        font-weight: 800;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          min-height: 260px;
+          padding: 20px;
+        }
+
+        .content {
+          padding: 20px;
+          gap: 12px;
+        }
+
+        .item {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster" aria-label="社内AI勉強会の告示ページ">
+      <section class="hero">
+        <span class="hero-tag">🤖 社内イベント</span>
+      </section>
+
+      <section class="content">
+        <div class="item">
+          <div class="label">タイトル</div>
+          <p class="value title-value">AI勉強会 〜はじめての生成AI活用〜</p>
+        </div>
+        <div class="item">
+          <div class="label">日時</div>
+          <p class="value"><time datetime="2026-04-18T14:00">2026年4月18日（土）14:00〜16:00</time></p>
+        </div>
+        <div class="item">
+          <div class="label">場所</div>
+          <p class="value">本社 5F コラボレーションホール</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
